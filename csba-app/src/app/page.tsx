@@ -1,65 +1,217 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold text-blue-600">CSBA</h1>
+            </div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+              <a href="#events" className="text-gray-700 hover:text-blue-600 transition-colors">Events</a>
+              <a href="#join" className="text-gray-700 hover:text-blue-600 transition-colors">Join Us</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+            Computer Science & Business
+            <span className="block text-blue-600">Association</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Bridging technology and business at The University of Texas at Austin
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#join"
+              className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Join CSBA
+            </a>
+            <a
+              href="#about"
+              className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About CSBA</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Who We Are</h3>
+              <p className="text-lg text-gray-600 mb-4">
+                The Computer Science and Business Association (CSBA) at UT Austin is a student organization 
+                dedicated to connecting students interested in the intersection of technology and business.
+              </p>
+              <p className="text-lg text-gray-600">
+                We provide opportunities for networking, professional development, and hands-on experience 
+                in both technical and business domains, preparing our members for successful careers in tech.
+              </p>
+            </div>
+            <div className="bg-blue-50 rounded-xl p-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Our Mission</h3>
+              <p className="text-lg text-gray-700">
+                To empower students at UT Austin by fostering a community that bridges computer science 
+                and business, providing resources, mentorship, and opportunities for growth in both fields.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="events" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Offer</h2>
+            <div className="w-24 h-1 bg-white mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-colors">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-2xl font-semibold mb-4">Professional Development</h3>
+              <p className="text-blue-50">
+                Workshops, resume reviews, and interview prep sessions to help you land your dream job 
+                in tech or business.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-colors">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-2xl font-semibold mb-4">Networking Events</h3>
+              <p className="text-blue-50">
+                Connect with industry professionals, alumni, and fellow students through our regular 
+                networking events and mixers.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-colors">
+              <div className="text-4xl mb-4">💼</div>
+              <h3 className="text-2xl font-semibold mb-4">Industry Partnerships</h3>
+              <p className="text-blue-50">
+                Exclusive access to company visits, tech talks, and recruitment events with leading 
+                technology and consulting firms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Section */}
+      <section id="join" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Join Our Community</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Ready to take your career to the next level? Join CSBA and become part of a vibrant 
+            community of students passionate about technology and business.
+          </p>
+          <div className="bg-blue-50 rounded-xl p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Membership Benefits</h3>
+            <ul className="text-left max-w-2xl mx-auto space-y-3 text-gray-700">
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">✓</span>
+                <span>Access to exclusive workshops and events</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">✓</span>
+                <span>Networking opportunities with industry professionals</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">✓</span>
+                <span>Mentorship programs and career guidance</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">✓</span>
+                <span>Project collaboration opportunities</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">✓</span>
+                <span>Priority access to company recruitment events</span>
+              </li>
+            </ul>
+          </div>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Get Involved
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Have questions? Want to learn more? We'd love to hear from you!
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Email Us</h3>
+              <a href="mailto:contact@csba.utexas.edu" className="text-blue-600 hover:text-blue-700">
+                contact@csba.utexas.edu
+              </a>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Follow Us</h3>
+              <div className="flex justify-center space-x-4">
+                <a href="#" className="text-blue-600 hover:text-blue-700">LinkedIn</a>
+                <a href="#" className="text-blue-600 hover:text-blue-700">Instagram</a>
+                <a href="#" className="text-blue-600 hover:text-blue-700">Discord</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">CSBA</h3>
+              <p className="text-gray-400">
+                Computer Science and Business Association at The University of Texas at Austin
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
+                <li><a href="#events" className="hover:text-white transition-colors">Events</a></li>
+                <li><a href="#join" className="hover:text-white transition-colors">Join Us</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Discord</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} CSBA at UT Austin. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
